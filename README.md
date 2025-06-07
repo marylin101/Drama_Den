@@ -1,1 +1,1 @@
-# Mzansi_Travels
+I am a big fan of asian dramas and have watched alot, because of this i was lost track of alll the dramas i have watched so i decided to have a drama journey but after the Master class i though why nor make it a website? thats how this website came about.
