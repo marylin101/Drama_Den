@@ -2,179 +2,360 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marylin's Drama Den</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drama Collection</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f9f7fc;
-      color: #333;
-      margin: 0;
-      padding: 20px;
-      line-height: 1.6;
+      background: #fff8f0;
+      color: #5a3e36;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    header {
-      text-align: center;
-      margin-bottom: 40px;
+
+    h1 {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #d2691e;
+      text-shadow: 1px 1px 2px #f4c2c2;
     }
-    header h1 {
-      font-size: 2.5em;
-      color: #6a1b9a;
-    }
-    .drama {
-      background: #fff;
-      border-left: 6px solid #6a1b9a;
-      padding: 15px 20px;
+
+    #showFormBtn {
+      background: #ffb6b9;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(255, 182, 185, 0.5);
+      transition: background-color 0.3s ease;
       margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
+
+    #showFormBtn:hover {
+      background: #ff8a8f;
+    }
+
+    form {
+      background: #fff0f5;
+      padding: 20px 25px;
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(255, 182, 185, 0.4);
+      max-width: 480px;
+      width: 100%;
+      display: none;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: #a64d79;
+      display: block;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px 14px;
+      font-size: 1rem;
+      border-radius: 15px;
+      border: 2px solid #f4c2c2;
+      outline: none;
+      transition: border-color 0.3s ease;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      resize: vertical;
+      min-height: 30px;
+    }
+
+    input[type="text"]:focus,
+    textarea:focus {
+      border-color: #d2691e;
+      background-color: #fff5f7;
+    }
+
+    textarea {
+      min-height: 80px;
+    }
+
+    input[type="submit"] {
+      background: #d2691e;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1.15rem;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(210, 105, 30, 0.7);
+      transition: background-color 0.3s ease;
+      align-self: center;
+      width: 50%;
+    }
+
+    input[type="submit"]:hover {
+      background: #a64d00;
+    }
+
+    .drama {
+      background: #fff0f5;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(255, 182, 185, 0.5);
+      padding: 20px 25px;
+      margin-bottom: 20px;
+      max-width: 480px;
+      width: 100%;
+    }
+
     .drama h2 {
       margin-top: 0;
-      color: #6a1b9a;
+      color: #d2691e;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-shadow: 1px 1px 2px #f4c2c2;
     }
+
     .song {
-      font-weight: bold;
+      font-weight: 600;
+      margin: 8px 0 2px;
+      color: #a64d79;
     }
+
     .lyrics {
+      margin: 0 0 12px 15px;
       font-style: italic;
-      color: #555;
+      color: #5a3e36;
     }
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 0.9em;
-      color: #888;
+
+    p {
+      margin: 6px 0;
+    }
+
+    strong {
+      color: #a64d79;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🌟 Marylin's Drama Den</h1>
-    <p>K-Drama & C-Drama OST Highlights and Descriptions</p>
-  </header>
-
+  <h1>Marylin's K-Drama OST Collection</h1>
+<div class="dramaContainer">
   <div class="drama">
     <h2>🎭 Kill Me, Heal Me</h2>
     <p class="song">Jang Jae In – Auditory Hallucination (환청)</p>
     <p class="lyrics">"I hear it again, that voice inside me..."</p>
-    <p>A gripping psychological drama about a man with dissociative identity disorder and the psychiatrist who helps him. The OST reflects his inner turmoil and healing journey.</p>
+    <p><strong>Rating:</strong> 9.5/10</p>
+    <p><strong>Theme:</strong> Mental health, identity, and inner healing.</p>
+    <p><strong>Why I liked it:</strong> The character depth and portrayal of multiple personalities were incredibly moving and well-acted.</p>
   </div>
 
   <div class="drama">
     <h2>👼 Angel’s Last Mission: Love</h2>
     <p class="song">Klang – Pray</p>
     <p class="lyrics">"I close my eyes and pray for you…"</p>
-    <p>A fantasy romance where an angel must find love for a cold ballerina. The music captures hope and divine longing.</p>
     <p class="song">Sojung – Perfume (향기)</p>
     <p class="lyrics">"The lingering scent reminds me of you…"</p>
+    <p><strong>Rating:</strong> 8.7/10</p>
+    <p><strong>Theme:</strong> Redemption and divine love.</p>
+    <p><strong>Why I liked it:</strong> The ballet scenes were stunning, and the chemistry between leads had me hooked.</p>
   </div>
 
   <div class="drama">
     <h2>🔥 Descendants of the Sun</h2>
     <p class="song">K.Will – Talk Love (말해! 뭐해?)</p>
     <p class="lyrics">"Just say it! What are you doing?"</p>
-    <p class="song">t Yoonmirae – ALWAYS</p>
+    <p class="song">Yoonmirae – ALWAYS</p>
     <p class="lyrics">"I’ll always protect you…"</p>
     <p class="song">Mad Clown & Kim Na Young – Once Again (다시 너를)</p>
     <p class="lyrics">"I miss you again, I cry again…"</p>
-    <p>A love story between a soldier and a doctor set against life-threatening missions. The OST reflects longing and courage.</p>
+    <p><strong>Rating:</strong> 9/10</p>
+    <p><strong>Theme:</strong> Love amidst danger and sacrifice.</p>
+    <p><strong>Why I liked it:</strong> The strong female lead and military backdrop made it thrilling and heartfelt.</p>
   </div>
 
   <div class="drama">
-    <h2>👻 Goblin</h2>
-    <p class="song">Ailee – I Will Go To You Like The First Snow (첫눈처럼 너에게 가겠다)</p>
-    <p class="lyrics">"I will go to you like the first snow…"</p>
-    <p class="song">Chanyeol & Punch – Stay With Me</p>
-    <p class="lyrics">"Every time I see you, my heart skips…"</p>
-    <p>A goblin cursed with immortality searches for his bride to end his life but finds unexpected love. The music blends fate, sorrow, and warmth.</p>
+    <h2>🌧️ When Paris Downcast</h2>
+    <p class="song">Lee Sun Hee – Silent Rain</p>
+    <p class="lyrics">"Raindrops fall where we once stood…"</p>
+    <p><strong>Rating:</strong> 8.9/10</p>
+    <p><strong>Theme:</strong> Memory, grief, and starting over.</p>
+    <p><strong>Why I liked it:</strong> The melancholic yet hopeful tone really resonated with me.</p>
   </div>
 
   <div class="drama">
-    <h2>🌙 Moon Lovers: Scarlet Heart Ryeo</h2>
-    <p class="song">Epik High feat. Lee Hi – Can You Hear My Heart</p>
-    <p class="lyrics">"Even if I shout, you don’t hear…"</p>
-    <p class="song">Davichi – Forgetting You</p>
-    <p class="lyrics">"Forgetting you is not easy..."</p>
-    <p>Time-traveling heroine lands in Goryeo dynasty and gets entangled in royal politics and love. The OST is full of yearning and beauty.</p>
+    <h2>🌙 Moon Lovers: Call It Ray</h2>
+    <p class="song">IU – Scarlet Tears</p>
+    <p class="lyrics">"Even in another life, I’ll find you again…"</p>
+    <p><strong>Rating:</strong> 9.8/10</p>
+    <p><strong>Theme:</strong> Tragic love across time.</p>
+    <p><strong>Why I liked it:</strong> The emotional depth and historical backdrop broke my heart in the best way.</p>
   </div>
 
   <div class="drama">
-    <h2>🧠 It’s Okay to Not Be Okay</h2>
-    <p class="song">Lee Suhyun – In Your Time</p>
-    <p class="lyrics">"I still live in your time..."</p>
-    <p class="song">Janet Suhh – In Silence</p>
-    <p class="lyrics">"Even in silence, your voice echoes..."</p>
-    <p>A healing romance between a psychiatric hospital worker and a fairytale writer. The music is delicate and haunting.</p>
+    <h2>🌧 Meteor Shower</h2>
+    <p class="song">Zhou Bichang – Love Rain</p>
+    <p class="lyrics">"Under this rain, my heart still waits for you…"</p>
+    <p><strong>Rating:</strong> 8.4/10</p>
+    <p><strong>Theme:</strong> High school romance and perseverance.</p>
+    <p><strong>Why I liked it:</strong> The charm of first love and emotional growth stood out.</p>
   </div>
 
   <div class="drama">
-    <h2>🌺 Ashes of Love</h2>
-    <p>A celestial romance full of magic, misunderstanding, and eternal love between the Flower Goddess’s daughter and the Fire Immortal.</p>
+    <h2>🌸 Meteor Garden</h2>
+    <p class="song">Penny Tai – Ni Yao De Ai (你要的爱)</p>
+    <p class="lyrics">"The love you want… will it ever be mine?"</p>
+    <p><strong>Rating:</strong> 9.2/10</p>
+    <p><strong>Theme:</strong> Class differences and unconditional love.</p>
+    <p><strong>Why I liked it:</strong> I loved the intensity and growth of the lead characters.</p>
   </div>
 
   <div class="drama">
-    <h2>🦋 Love Between Fairy and Devil</h2>
-    <p>A beautiful fantasy of a lowly fairy taming the ruthless Moon Supreme. No OST is listed, but the visuals and emotions speak volumes.</p>
+    <h2>💃 Les Belles</h2>
+    <p class="song">Baek Yerin – Dance With Me</p>
+    <p class="lyrics">"Every step tells our story…"</p>
+    <p><strong>Rating:</strong> 8.5/10</p>
+    <p><strong>Theme:</strong> Friendship, performance, and breaking free.</p>
+    <p><strong>Why I liked it:</strong> Beautiful choreography and empowering storyline.</p>
   </div>
 
   <div class="drama">
-    <h2>💔 Queen of Tears</h2>
-    <p>Rich with emotion and heartbreak, this drama tells of a married couple’s trials and rediscovery of love. A recent fan favorite even without a standout OST.</p>
+    <h2>🌫 Exceedingly Low (tentative title)</h2>
+    <p class="song">Heize – Falling Deep</p>
+    <p class="lyrics">"Even the light forgot me…"</p>
+    <p><strong>Rating:</strong> 8.8/10</p>
+    <p><strong>Theme:</strong> Overcoming depression and finding purpose.</p>
+    <p><strong>Why I liked it:</strong> A raw and honest portrayal of mental health with a powerful message.</p>
   </div>
 
   <div class="drama">
-    <h2>🌸 When Paris Downcasts</h2>
-    <p>A poetic tale with a moody atmosphere; emotionally driven even without a well-known OST.</p>
+    <h2>👻 Goblin (Guardian: The Lonely and Great God)</h2>
+    <p class="song">EXO – Stay With Me</p>
+    <p class="lyrics">"Stay with me, hold my hand..."</p>
+    <p><strong>Rating:</strong> 9.7/10</p>
+    <p><strong>Theme:</strong> Fate, immortality, and love beyond time.</p>
+    <p><strong>Why I liked it:</strong> Beautiful storytelling with deep emotional impact and memorable OSTs.</p>
   </div>
 
   <div class="drama">
-    <h2>💕 Playful Kiss</h2>
-    <p>A lighthearted romantic comedy following a high school girl’s clumsy yet persistent pursuit of her cold, genius classmate. Sweet and silly, with a youthful tone.</p>
+    <h2>💐 Boys Over Flowers</h2>
+    <p class="song">SS501 – Because I’m Stupid</p>
+    <p class="lyrics">"Because I’m stupid, I miss you..."</p>
+    <p><strong>Rating:</strong> 9/10</p>
+    <p><strong>Theme:</strong> High school romance, social class struggles.</p>
+    <p><strong>Why I liked it:</strong> Classic romance with strong character chemistry.</p>
   </div>
 
   <div class="drama">
-    <h2>🎀 Accidental In Love</h2>
-    <p>Disguised heiress meets a rising idol in school. Quirky, fun, and unexpectedly heartfelt.</p>
+    <h2>🏫 The Heirs</h2>
+    <p class="song">Lyn – My Destiny</p>
+    <p class="lyrics">"You are my destiny, the one I love..."</p>
+    <p><strong>Rating:</strong> 8.9/10</p>
+    <p><strong>Theme:</strong> Wealth, friendship, and young love.</p>
+    <p><strong>Why I liked it:</strong> The emotional rollercoaster and soundtrack were unforgettable.</p>
   </div>
-
-  <div class="drama">
-    <h2>🫶 Hidden Love</h2>
-    <p>Youthful love quietly grows from friendship to romance. Known for its soft, heart-fluttering moments.</p>
   </div>
+  <button id="showFormBtn">Add Drama</button>
 
-  <div class="drama">
-    <h2>🗡️ Who Rules the World</h2>
-    <p>Wuxia fantasy of rival martial artists caught in politics and destiny. Action-packed and beautifully stylized.</p>
-  </div>
+  <form id="addDramaForm">
+    <label for="dramaTitle">Drama Title</label>
+    <input type="text" id="dramaTitle" required />
 
-  <div class="drama">
-    <h2>👑 The Red Sleeve</h2>
-    <p>Historical drama based on the real love story between King Jeongjo and his court lady. Touching and tragic.</p>
-  </div>
+    <label for="dramaSongs">Songs and Lyrics <small>(Use "||" to separate songs, and "–" to separate song title and lyrics)</small></label>
+    <textarea id="dramaSongs" placeholder="Example: Song1 – Lyrics1 || Song2 – Lyrics2" required></textarea>
 
-  <div class="drama">
-    <h2>🐶 Unforgettable Love</h2>
-    <p>A CEO and a child psychologist find themselves caring for a child together. Gentle and warm family-centered romance.</p>
-  </div>
+    <label for="dramaRating">Rating (e.g., 8/10)</label>
+    <input type="text" id="dramaRating" required />
 
-  <div class="drama">
-    <h2>👸 Princess Weiyoung</h2>
-    <p>Historical revenge drama of a fallen princess navigating palace politics and forbidden love.</p>
-  </div>
+    <label for="dramaTheme">Theme</label>
+    <input type="text" id="dramaTheme" required />
 
-  <div class="drama">
-    <h2>🌠 Oh My Emperor</h2>
-    <p>Time-travel fantasy featuring zodiac-based kingdoms, humor, and charm. A fresh take on palace intrigue.</p>
-  </div>
+    <label for="dramaWhy">Why I liked it</label>
+    <textarea id="dramaWhy" required></textarea>
 
-  <div class="drama">
-    <h2>🥀 Goodbye My Princess</h2>
-    <p>Tragic historical romance full of deception, fate, and unforgettable sorrow. One of the most emotionally intense C-dramas.</p>
-  </div>
+    <input type="submit" value="Add Drama" />
+  </form>
+  <script>
+    const showFormBtn = document.getElementById('showFormBtn');
+    const addForm = document.getElementById('addDramaForm');
+    const dramaContainer = document.getElementById('dramaContainer');
 
-  <footer>
-    <p>Created by Marylin Zhou • Last updated 2025</p>
-    <p style="margin-top: 20px; font-style: italic; color: #6a1b9a;">“In this little chaos, I found focus. My desk—cluttered by deadlines and dreams—has become my dwelling place, my sanctuary in the storm of study.”</p>
-  </footer>
+    showFormBtn.addEventListener('click', () => {
+      if (addForm.style.display === 'none' || addForm.style.display === '') {
+        addForm.style.display = 'flex';
+        showFormBtn.textContent = 'Cancel';
+      } else {
+        addForm.style.display = 'none';
+        showFormBtn.textContent = 'Add Drama';
+      }
+    });
+
+    addForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const title = document.getElementById('dramaTitle').value.trim();
+      const songsRaw = document.getElementById('dramaSongs').value.trim();
+      const rating = document.getElementById('dramaRating').value.trim();
+      const theme = document.getElementById('dramaTheme').value.trim();
+      const why = document.getElementById('dramaWhy').value.trim();
+
+      if (!title || !songsRaw || !rating || !theme || !why) {
+        alert('Please fill in all fields.');
+        return;
+      }
+
+      const songsArray = songsRaw.split('||').map(songStr => {
+        const dashIndex = songStr.indexOf('–');
+        if (dashIndex === -1) {
+          return { song: songStr.trim(), lyrics: '' };
+        } else {
+          return {
+            song: songStr.slice(0, dashIndex).trim(),
+            lyrics: songStr.slice(dashIndex + 1).trim()
+          };
+        }
+      });
+
+      const dramaDiv = document.createElement('div');
+      dramaDiv.className = 'drama';
+
+      const h2 = document.createElement('h2');
+      h2.textContent = `🎭 ${title}`;
+      dramaDiv.appendChild(h2);
+
+      songsArray.forEach(({ song, lyrics }) => {
+        const pSong = document.createElement('p');
+        pSong.className = 'song';
+        pSong.textContent = song;
+        dramaDiv.appendChild(pSong);
+
+        if (lyrics) {
+          const pLyrics = document.createElement('p');
+          pLyrics.className = 'lyrics';
+          pLyrics.textContent = `"${lyrics}"`;
+          dramaDiv.appendChild(pLyrics);
+        }
+      });
+
+      const pRating = document.createElement('p');
+      pRating.innerHTML = `<strong>Rating:</strong> ${rating}`;
+      dramaDiv.appendChild(pRating);
+
+      const pTheme = document.createElement('p');
+      pTheme.innerHTML = `<strong>Theme:</strong> ${theme}`;
+      dramaDiv.appendChild(pTheme);
+
+      const pWhy = document.createElement('p');
+      pWhy.innerHTML = `<strong>Why I liked it:</strong> ${why}`;
+      dramaDiv.appendChild(pWhy);
+
+      dramaContainer.appendChild(dramaDiv);
+
+      addForm.reset();
+      addForm.style.display = 'none';
+      showFormBtn.textContent = 'Add Drama';
+    });
+  </script>
 </body>
 </html>
